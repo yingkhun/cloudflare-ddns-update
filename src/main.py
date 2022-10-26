@@ -1,7 +1,8 @@
 import requests, sys, time, datetime, pytz, os
 
 class Clondflare:
-    def __init__(self, email, domain, api_key, interval_time):
+    def __init__(self, email, domain, api_key, interval_time, time_zone):
+        self.time_zone = time_zone
         self.interval_time = interval_time
         self.email = email
         if len(domain.split('.')) == 2:
@@ -95,6 +96,6 @@ api_key = os.environ['api_key']
 interval_time = int(os.environ['interval_time'])
 if interval_time < 20:
     interval_time = 20
-    
-cf = Clondflare(email, domain, api_key, interval_time)
+time_zone = os.environ['time_zone']
+cf = Clondflare(email, domain, api_key, interval_time, time_zone)
 cf.run()
