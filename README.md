@@ -13,4 +13,5 @@ services:
       - interval_time=${interval_time}
       - time_zone=Asia/Bangkok
 ```
+ `Global API Key : https://dash.cloudflare.com/profile/api-tokens` <br>
 `interval_time minimum : 20`
