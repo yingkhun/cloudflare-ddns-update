@@ -11,5 +11,6 @@ services:
       - domain=${domain}
       - api_key=${api_key}
       - interval_time=${interval_time}
+      - time_zone=Asia/Bangkok
 ```
 `interval_time minimum : 20`
